@@ -1,2 +1,116 @@
-Sortieralgorithmen:
+		Sortieralgorithmen:
 
+Selectionsort
+
+https://studyflix.de/informatik/selectionsort-1323
+
+Laufzeit: avg=min=max=O(n²) 
+
+Algorithmus:
+	Nehme erstes Element und suche nach dem kleinsten in der gesamten Liste.
+	Tausche das erste element mit dem kleinsten -> Das kleinste steht nun an erster stelle
+
+	Wiederhole für zweites element usw.
+
+	Links vom aktuellen index ist immer sortiert, rechts unsortiert	
+
+	Bsp: 	[7][5][2][9][4]
+		[2][5][7][9][4]
+		[2][4][7][9][5]
+		[2][4][5][9][7]
+		[2][4][5][7][9]
+
+
+Insertionsort
+
+https://studyflix.de/informatik/insertionsort-1321
+
+Laufzeit: avg=max=O(n²)
+	       min=O(n)	 
+
+Algorithmus:
+	Das erste Element gilt als Sortierter Bereich. Gehe zum zweiten element. Wenn es größer als das erste ist,
+        füge es rechts davon ein, sonst links. 
+	Gehe zum nächsten element und füge es an passender Stelle im sortierten bereich ein, sodass alle zahlen
+	links davon kleiner und alle rechts davon größer sind.
+
+	Bsp:	[4][7][5][3][9][1][2]
+		[4][5][7][3][9][1][2]
+		[3][4][5][7][9][1][2]
+		[1][3][4][5][7][9][2]
+		[1][2][3][4][5][7][9]
+
+
+BubbleSort
+
+https://studyflix.de/informatik/bubblesort-1325
+
+Laufzeit: avg=max=O(n²)
+	       min=O(n)	
+
+Algorithmus:
+	Nehme das erste zweierpaar. Wenn der rechte wert kleiner ist als der linke vertausche sie. Gehe einen Index weiter
+	Der Linke wert ist nun der rechte vom alten paar. Wiederhole den vergleich und tausch. Gehe wieder weiter.
+	Wiederhole solange bis du am ende der Liste bist. Der letzte wert ist nun der größte wert der Liste. 
+	Gehe wieder zum ersten Index. Wiederhole den Durchlauf so oft bis die ganze Liste sortiert ist.
+	
+	--> Die sortierte Liste wächst von rochts nach links	
+
+	Bsp:
+
+	1. Durchlauf 	[5] [1] [4] [9] [0] [8] [6]
+			[1] [5] [4] [9] [0] [8] [6]
+			[1] [4] [5] [9] [0] [8] [6]
+			[1] [4] [5] [9] [0] [8] [6]
+			[1] [4] [5] [0] [9] [8] [6]
+			[1] [4] [5] [0] [8] [9] [6]
+			[1] [4] [5] [0] [8] [6] [9]
+
+	2. Durchlauf    [1] [4] [5] [0] [8] [6] [9]
+			[1] [4] [5] [0] [8] [6] [9]
+			[1] [4] [5] [0] [8] [6] [9]
+			[1] [4] [0] [5] [8] [6] [9]
+			[1] [4] [0] [5] [8] [6] [9]
+			[1] [4] [0] [5] [6] [8] [9]
+
+	3. Durchlauf	[1] [4] [0] [5] [6] [8] [9]
+			[1] [4] [0] [5] [6] [8] [9]
+			[1] [0] [4] [5] [6] [8] [9]
+			[1] [0] [4] [5] [6] [8] [9]
+			[1] [0] [4] [5] [6] [8] [9]	
+
+	4. Durchlauf	[1] [0] [4] [5] [6] [8] [9]
+			[0] [1] [4] [5] [6] [8] [9]
+			[0] [1] [4] [5] [6] [8] [9]
+	
+	5. Durchlauf	[0] [1] [4] [5] [6] [8] [9]
+			[0] [1] [4] [5] [6] [8] [9]
+
+	6. Durchlauf	[0] [1] [4] [5] [6] [8] [9]
+
+	Fertig 		[0] [1] [4] [5] [6] [8] [9]
+
+
+MergeSort
+
+https://studyflix.de/informatik/mergesort-1324
+
+Laufzeit: O(n*log(n))
+
+Divide and Conquer: Aufteilen des Problems in kleinere Teilprobleme, welche gelößt das Gesamtproblem lösen.
+
+Algorithmus:
+	Halbiere die Liste solange bis du nur noch zweierpaare hast. Sortiere diese zweierpaare.
+	Nehme dann zwei zweierpaare und mische Sie sortiert zusammen. Wiederhole diesen Schritt so oft mit jeweils größeren Paaren
+	bis du eine Sortierte Liste hast.
+
+Bsp:
+	[5] [2] [4] [8] [1] [9] [7] [3] [6]
+	[5] [2] [4] [8]       [1] [9] [7] [3] [6]
+	[5] [2]      [4] [8]       [1] [9]      [7] [3] [6]	
+	[5]     [2]      [4]    [8]       [1]     [9]      [7]     [3] [6]		
+	[5]     [2]      [4]    [8]       [1]     [9]      [7]     [3]     [6]	
+	[2][5]      [4][8]       [1][9]      [7]     [3][6]	
+	[2][4][5][8]       [1][9]      [3][6][7]	
+	[2][4][5][8]       [1][3][6][7][9]
+	[1][2][3][4][5][6][7][8][9]
