@@ -148,10 +148,27 @@ Bsp(Pivot jeweils mit Stern):
 	[1][2][3][4][5][6][7][8][9]	Done
 
 
+
 HeapSort
 
+https://studyflix.de/informatik/heapsort-1326
 	
-	
+Laufzeit: O(n*log(n))
+
+Algorithmus:
+	Man erstellt im Array einen Max-Heap (Wurzel muss immer größer als Blätter sein). Tausche Erstes Element (Größtes und erste Wurzel) mit dem letztem (unterste Ebene
+	am weitesten rechts). Letzte Position kann damit ignoriert werden da fertig sortiert. Max-Heap wiederherstellen und das gleiche nochmal.
+
+Bsp:
+	[11] | [8][6] | [3][7]  [9][2] | [15][12]  [4] 	Max-Heap erstellen
+	[11] | [8][6] | [15][7]  [9][2] | [3][12]  [4] 
+	[11] | [8][9] | [15][7]  [6][2] | [3][12]  [4] 
+	[11] | [15][9] | [8][7]  [6][2] | [3][12]  [4] 
+	[11] | [15][9] | [12][7]  [6][2] | [3][8]  [4] 
+	[15] | [11][9] | [12][7]  [6][2] | [3][8]  [4] 
+	[15] | [12][9] | [11][7]  [6][2] | [3][8]  [4] 
+	[4] | [12][9] | [11][7]  [6][2] | [3][8]  [15] 	Letztes mit erstem Tauschen und letztes entfernen, dann wieder Max-Heap erstellen
+	...
 
 
 
