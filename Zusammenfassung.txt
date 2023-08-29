@@ -54,7 +54,7 @@ Algorithmus:
 	Wiederhole solange bis du am ende der Liste bist. Der letzte wert ist nun der größte wert der Liste. 
 	Gehe wieder zum ersten Index. Wiederhole den Durchlauf so oft bis die ganze Liste sortiert ist.
 	
-	--> Die sortierte Liste wächst von rochts nach links	
+	--> Die sortierte Liste wächst von rechts nach links	
 
 	Bsp:
 
@@ -114,3 +114,53 @@ Bsp:
 	[2][4][5][8]       [1][9]      [3][6][7]	
 	[2][4][5][8]       [1][3][6][7][9]
 	[1][2][3][4][5][6][7][8][9]
+
+
+QuickSort
+
+https://studyflix.de/informatik/quicksort-beispiel-1329
+
+Laufzeit: AVG&Best: O(n*log(n)) Worst: O(n²)
+
+Divide and Conquer Prinzip: Aufteilen des Problems in kleinere Teilprobleme, welche gelößt das Gesamtproblem lösen.
+
+Algorithmus: 
+	Wähle Pivot (oft Median) und tausche mit rechtem Element. Laufe mit einem "Zeiger" von rechts nach links und prüfe Element < PivotElement, und mit einem weiteren
+	Zeiger von links nach rechts und prüfe Element > PivotElement. Tausche falls beide Fälle zutreffen die Elemente. Wenn "Zeiger" sich treffen tausche Pivot an die Stelle.
+	Dann rekursiv für Liste links und Liste rechts von Pivot.
+
+Bsp(Pivot jeweils mit Stern):
+
+	[5][3][9][4][8*][7][2][1][6]
+	[5][3][9][4][6][7][2][1][8*]	Tasuche Pivot nach rechts
+	[5][3][1][4][6][7][2][9][8*]	Tausche 9 & 1 
+	[5][3][1][4][6][7][2][8][9]	Tausche 9 & 8 weil Zeiger sich treffen
+	[5][3][1][4*][6][7][2]   [8][9]	Suche Links ein neues Pivot (rechts ist fertig weil nur 1 Element)
+	[5][3][1][2][6][7][4*]   [8][9]	Tausche Pivot nach rechts
+	[2][3][1][5][6][7][4*]   [8][9]	Tausche 5 & 2
+	[2][3][1][4][6][7][5]   [8][9] 	Tausche 5 & 4
+	[2][3*][1]  [4]  [6][7*][5]   [8][9] 	Suche neue Pivots neben 4 
+	[2][1][3*]  [4]  [6][5][7*]   [8][9]	Beide Pivots nach rechts tauschen
+	[2][1]  [3]  [4]  [6][5]  [7]   [8][9]	Beide bleiben rechts weil links nichts kleiner
+	[2][1*]  [3]  [4]  [6][5*]  [7]   [8][9]	Neue Pivots in den restlichen Listen suchen
+	[1*][2]  [3]  [4]  [5*][6]  [7]   [8][9]	Zeiger treffen sich Pivot tauschen
+	[1]  [2]  [3]  [4]  [5]  [6]  [7]  [8][9]	Weil die restlichen Listen ([2] & [6] nur ein Element haben sind die fertig)
+	[1][2][3][4][5][6][7][8][9]	Done
+
+
+HeapSort
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
