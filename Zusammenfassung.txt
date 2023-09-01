@@ -171,6 +171,38 @@ Bsp:
 	...
 
 
+Adjazenzmatrix/Adjazenzliste:
+
+	In einer Adjazenzmatrix kann man ablesen von welchem Knoten man zu welchem Knoten kommt. Es handelt sich um eine n x n Matrix, die einen Graph beschreibt, wo N die Menge an Knoten ist, die der
+	Graph enthält. Bei einem ungerichteten Graph, sind die Wege in der Matrix kommutativ. Bei einem gerichteten Graph nicht.
+
+	In einer Adjazenzliste werden nur die Knoten angegeben, welche man von dem jeweiligen Knoten (Spaltenzeile) erreicht.
+
+Bäume:
+	
+	Traversieren von Bäumen:
+		PreOrder: Es geht erst an jedem Knoten nach links und wenns nicht mehr geht rechts. 
+		Bsp:
+			a
+		            b          c
+                                           d
+		= a,b,d,c
+		
+		InOrder: Erst komplett nach links und von da beginnt das ausgeben. 
+		Bsp:
+			a
+		            b          c
+                                           d
+		= d,b,a,c
+		
+		PostOrder: Zuerst der linke unterknoten dann den rechten und dann den hauptknoten
+		Bsp:
+			a
+		            b          c
+                                           d
+		= d,b,c,a
+	
+
 
 
 
