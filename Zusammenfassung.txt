@@ -205,11 +205,54 @@ Bäume:
 
 
 
+Tiefensuche (DFS (Depth First Search))
+
+https://www.youtube.com/watch?v=Urx87-NMm6c&ab_channel=MichaelSambol
+https://www.youtube.com/watch?v=RWzfvENr9oA&ab_channel=42Entwickler
+
+	Gehe so tief wie möglich in den Baum. Fange am Hauptknoten an und nimm immer das erstbeste child. Wenn das Child kein Child mehr hat gehe solange in der Hierachie nach oben bis 
+	irgendein Knoten wieder ein child hat und führe die Suche dort fort.
 
 
+			a
+		b		c
+	d
+	e
+	
+	Output: a,b,d,e,c	
+
+Breitensuche (BFS (Breadth First Search) (hehe Bread))
+
+https://www.youtube.com/watch?v=HZ5YTanv5QE&ab_channel=MichaelSambol
+https://www.youtube.com/watch?v=qxiBp1EFMPI&ab_channel=42Entwickler
+
+	Gehe immer alle Childknoten eines Baumes ab, bevor du eine Ebene tiefer gehst. Fange beim root an und lass dir alle Seiner direkten childnotes geben. Wenn du alles childnotes hast, lass die die jeweils nächste Ebene an childnotes geben.
+
+			a
+		b		c
+	d				f
+	e			g
+
+	Output: a,b,c,d,f,e,g
 
 
+Topologische Sortierung:
+
+https://www.youtube.com/watch?v=4hAqEjj7IdE&ab_channel=newtutorialplace
+https://www.youtube.com/watch?v=UV0ofPi4PHw&ab_channel=Mathekrieger
+
+	Vorbedingung:
+		Graph muss gerichtet sein
+		Graph darf keine Zyklen enthalten
 
 
+	Starte mit dem Knoten auf den Kein anderer Zeigt. Wenn mehrere Such dir einen aus. Dieser ist der erste in der liste. Dann lösche alle ausgehenden Kanten dieses Knotens. Suche dir dann wieder einen Knoten aus auf den keine Kante zeigt und wiederhole bis alle Knoten abgearbeitet wurden.
 
 
+	
+HamiltonKreis 
+	Ein Graph wo der Startknoten der endknoten ist und jeder Pfad nur einmal verwendet wird.
+
+	Finden:
+	Einen großen Rundweg finden und auf dem Weg alle Subzyklen abklappern
+	https://www.youtube.com/watch?v=aAKDDW4gUGs&ab_channel=Weitz%2FHAWHamburg
