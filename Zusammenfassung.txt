@@ -256,3 +256,11 @@ HamiltonKreis
 	Finden:
 	Einen großen Rundweg finden und auf dem Weg alle Subzyklen abklappern
 	https://www.youtube.com/watch?v=aAKDDW4gUGs&ab_channel=Weitz%2FHAWHamburg
+
+Abstände in Netzwerken 
+
+Dijkstra Algorithmus 
+
+https://www.youtube.com/watch?v=KiOso3VE-vI&ab_channel=FlorianDalwigk
+
+	Erstelle eine Tabelle. Diese Tabelle hat 3 Spalten: Knoten, Kosten und Vorgänger. In der Knotenspalte bekommt jeder Knoten eine Zeile. ... IDK guck das video
