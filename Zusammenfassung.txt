@@ -288,4 +288,8 @@ Prim Algorithmus
 	Greedy Algorithmus, weil er nur lokal beste Kanten nimmt.
 
 Kruskal Algorithmus
+
+	https://studyflix.de/informatik/kruskal-algorithmus-1292
+
+	Sortieren der Kanten aufsteigend nach Gewicht. Die kürzesten Kanten werden nacheinander in den Graph gepackt, ohne einen Zyklus zu verursachen.
 	
