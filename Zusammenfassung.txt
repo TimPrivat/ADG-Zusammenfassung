@@ -246,21 +246,46 @@ https://www.youtube.com/watch?v=UV0ofPi4PHw&ab_channel=Mathekrieger
 		Graph darf keine Zyklen enthalten
 
 
-	Starte mit dem Knoten auf den Kein anderer Zeigt. Wenn mehrere Such dir einen aus. Dieser ist der erste in der liste. Dann lösche alle ausgehenden Kanten dieses Knotens. Suche dir dann wieder einen Knoten aus auf den keine Kante zeigt und wiederhole bis alle Knoten abgearbeitet wurden.
+	Starte mit dem Knoten auf den Kein anderer Zeigt. Wenn mehrere Such dir einen aus. Dieser ist der erste in der liste. Dann lösche alle ausgehenden Kanten dieses Knotens.
+	Suche dir dann wieder einen Knoten aus auf den keine Kante zeigt und wiederhole bis alle Knoten abgearbeitet wurden.
 
 
 	
-HamiltonKreis 
-	Ein Graph wo der Startknoten der endknoten ist und jeder Pfad nur einmal verwendet wird.
+EulerKreis 
+	Ein Graph wo der Startknoten der endknoten ist und jede Kante nur einmal verwendet wird.
 
 	Finden:
 	Einen großen Rundweg finden und auf dem Weg alle Subzyklen abklappern
 	https://www.youtube.com/watch?v=aAKDDW4gUGs&ab_channel=Weitz%2FHAWHamburg
 
+Hamiltonkreis
+	Ein Graph wo der Startknoten der Endknoten ist und alle Knoten einmal durchlaufen werden, welche Kanten hier benutzt werden ist egal.
+
+	
+
+
+
 Abstände in Netzwerken 
 
 Dijkstra Algorithmus 
 
-https://www.youtube.com/watch?v=KiOso3VE-vI&ab_channel=FlorianDalwigk
+	https://www.youtube.com/watch?v=KiOso3VE-vI&ab_channel=FlorianDalwigk
 
 	Erstelle eine Tabelle. Diese Tabelle hat 3 Spalten: Knoten, Kosten und Vorgänger. In der Knotenspalte bekommt jeder Knoten eine Zeile. ... IDK guck das video
+
+Bellmann Algorithmus
+	
+	https://studyflix.de/informatik/bellman-ford-algorithmus-1294
+
+	Startknoten auswählen und setze dessen Distanz auf 0. 
+	
+Prim Algorithmus
+	
+	https://studyflix.de/informatik/bellman-ford-algorithmus-1294
+
+	Minimalgerüst Berechnung. Zuerst beliebigen Startknoten nehmen. Dann die Kante die am wenigsten Kostet behalten und von dem neuen Knoten und alten gucken welcher der günstigste ist und immer die behalten, bis alle Knoten
+	verbunden sind.
+	Greedy Algorithmus, weil er nur lokal beste Kanten nimmt.
+
+Kruskal Algorithmus
+	
