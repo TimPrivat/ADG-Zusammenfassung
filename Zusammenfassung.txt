@@ -292,4 +292,17 @@ Kruskal Algorithmus
 	https://studyflix.de/informatik/kruskal-algorithmus-1292
 
 	Sortieren der Kanten aufsteigend nach Gewicht. Die kürzesten Kanten werden nacheinander in den Graph gepackt, ohne einen Zyklus zu verursachen.
+
+Flussnetzwerk:	
+	Maximalen Fluss finden:
+	Ford Fulkerson Algorithmus
+	https://www.youtube.com/watch?v=ZKEi6zf0O9g&ab_channel=FragW%C3%BCrdig
+
+MinCut
+	Der MinCut = der Maxfluss
+	
+Zu11.3: Keine Ahnung, niochts gefunden aber würde einfach tmpknoten einführen in die jeweils eine Kante ein und aus geht die die Kapazität vom knoten haben... oder Knoten einfach als Kanten behandeln
+
+11.4 Mach ich morgen hehe
+
 	
