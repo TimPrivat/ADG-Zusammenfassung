@@ -297,11 +297,25 @@ Flussnetzwerk:
 	Maximalen Fluss finden:
 	Ford Fulkerson Algorithmus
 	https://www.youtube.com/watch?v=ZKEi6zf0O9g&ab_channel=FragW%C3%BCrdig
+	https://www.youtube.com/watch?v=Tl90tNtKvxs&ab_channel=MichaelSambol
 
 MinCut
+	Mincut: Gerade welche quer durch den fluss geht. Die summierte Kapazität der Kanten ist ihr wert. Mincut ist die gerade mit der Kleinstmöglichen Kombination an Kanten.
 	Der MinCut = der Maxfluss
 	
-Zu11.3: Keine Ahnung, niochts gefunden aber würde einfach tmpknoten einführen in die jeweils eine Kante ein und aus geht die die Kapazität vom knoten haben... oder Knoten einfach als Kanten behandeln
+	
+Zu11.3: Keine Ahnung, nichts gefunden aber würde einfach tmpknoten einführen in die jeweils eine Kante ein und aus geht die die Kapazität vom knoten haben... oder Knoten einfach als Kanten behandeln
+
+
+BiPartes Matching:
+	https://www.youtube.com/watch?v=ryEpL70RB6g&ab_channel=TheMorpheusTutorials
+	Linke Knoten werden mit einer QUelle verbunden und die rechten zeigen alle auf die Senke. Durch jede Leitung darf nur 1 Fließen, wenn 2 Linke oder 2 rechte verbunden sind darf nichts durch fließen. Dann Ford Fulkerson anwenden.
+Ungarischer algorithmus:
+	https://studyflix.de/informatik/ungarische-methode-1296
+	Wenn man nach Präferenzen sortieren will ... hat der wichser mal in nem Nebensatz erwähnt.
+
+	Mache eine Tabelle mit allen optionenziehe aus jedem wert immer 1 ab, bis du eine Null hast. Da wo zuerst null darf zuerst. Wenn du keine Null hast zeihe da weiter ab
+
 
 11.4 Mach ich morgen hehe hehehe
 
