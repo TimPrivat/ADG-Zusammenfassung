@@ -303,6 +303,69 @@ MinCut
 	
 Zu11.3: Keine Ahnung, niochts gefunden aber würde einfach tmpknoten einführen in die jeweils eine Kante ein und aus geht die die Kapazität vom knoten haben... oder Knoten einfach als Kanten behandeln
 
-11.4 Mach ich morgen hehe
+11.4 Mach ich morgen hehe hehehe
+
+
+Boyer Moore PM Algorithmus:
+
+	Präprozessieren:
+	Der BM Algorithmus ermittelt im Pattern wo die jeweiligen "Buchstaben" aus dem Alphabet als letztes aufzufinden sind. 
+	Bei Pattern: "19229" wäre für den Buchstaben 9 : Index 4 und für 2 index 3 und für 1 index 0.
+
+	Du hast ein Text und ein Pattern. z.B. Text = "51239518320" und Pattern "951".
+	Du legst Text und Pattern untereinander:
+	51239518320
+	951
+	Jetzt  vergleichst du Pattern[2] (die letzte Stelle vom Pattern) mit der Stelle im Text die drüber ist.
+	2 != 1, d.h. du schaust im Pattern ob da eine 2 vorkommt.
+		Falls ja: bewege das Pattern so weit nach rechts bis die 2 im Pattern unter der 2 im Text ist. 
+		Falls nein: bewege das Pattern um die länge des Patterns.
+	Bei uns ist nein das heißt :
+	51239518320
+	     951
+	Wiederhole den Schritt von vorhin.
+	5 != 1
+		Eine 5 kommt im Pattern vor bewege also damit es matcht.
+	51239518320
+	       951
+	1 = 1, 5 = 5, 9 = 9
+	Merke Stelle wo das Pattern gematcht ist. (i = 4)
+
+	Bewege Pattern weiter um die Länge des Patterns
+	51239518320
+	            951
+	Wiederhole.
+
+
+Knuth Morris Pratt Algorithmus:
+
+	Präprozession:
+	Bereite eine Tabelle vor. 
+	j     0 1 2 3 4
+	P[j] a b a b b	
+	F(j) 0 0 1 2 2
+
+	Diese zeigt wo der Präfix (a,b) im rest des Patterns zu finden ist. 
+	
+	Text = 415415412 Pattern = 415412
+
+	415415412 
+	415412
+
+	Tabelle des Patterns 
+	j     0 1 2 3 4 5
+	P[j] 4 1 5 4 1 2	
+	F(j) 0 0 0 1 2 0
+	
+	415415412 
+	415412
+
+	Man vergleicht j = 0 (P[0]) mit i = 0. Falls das matcht dann beide + 1. Bei einem mismatch (i = 5) geht man dahin an den index wo F(J-1) ist. das bedeutet bei uns 
+	j = 2. Man vergleicht also jetzt i = 5 mit j = 2, falls es matcht geht man weiter falls nicht geht man zu F(j-1) = 0. Man geht also zum letzt bekanntem Prefix zurück. 
+
+
+
+
+
 
 	
