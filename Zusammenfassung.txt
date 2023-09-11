@@ -379,6 +379,33 @@ Knuth Morris Pratt Algorithmus:
 
 
 
+Hamming Distanz:
+	
+	Wenn 2 Strings die gleiche Laenge haben, ist die Hamming Distanz, wie an wie vielen Positionen sich der eine String vom anderen unterscheidet.
+
+Editier Distanz:
+	
+	Wenn man 2 Strings x und y hat, ist die Editier Distanz die kleinste Anzahl an ein und loeschoperationen, um x in y zu ueberfuehren.
+	Nimmt man dort auch die Ersetzung eines Symbols dazu ist das die Levenstein Metrik. lev(x,y)
+	
+	Nimmt man dazu auch noch die Vertauschung von benachbarten Symbolen ist es die Damerau Levenstein Metrik. dlev(x,y)
+
+dlev <= lev <= edit
+
+LEV Algorithmus:
+	Eine 2D Tabelle mit n+1 * m+1. n = Laenge von Wort 1, m = Laenge von Wort 2.
+	LEV(i,j) = min { LEV(i, j-1) + 1, LEV(i-1, j) + 1, oder LEV(i-1,j-1) + delta(x[i],y[j]) }
+	delta vergleicht die Buchstaben, falls gleich ist es 0 falls ungleich 1. 
+
+	Das bedeutet man fuellt die erste Zeile von 0 - m und die erste Spalte von 0 - n. 
+	Danach min { Wert links neben der Zeile + 1, Wert ueber der Zeile + 1, wert oben links ueber der Stelle + 1 oder 0 }.
+
+	Fuer dlev,lev und edit kann die Distanz in Zeit O(mn) ermittelt werden.
+
+	MLEV Tabelle das Gleiche nur mit Teilstring Pattern in einem String suchen oder so ich checks ueberhaupt nicht. Tabelle sieht 1 zu 1 gleich aus ausser die erste
+	Zeile die wird nicht von 0 - m hochgezaehlt sondern ist komplett 0.
+
+
 
 
 
