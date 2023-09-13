@@ -278,6 +278,8 @@ Bellmann Algorithmus
 	https://studyflix.de/informatik/bellman-ford-algorithmus-1294
 
 	Startknoten auswählen und setze dessen Distanz auf 0. 
+
+Falls ein Negativer Zyklus existiert ist jeder Wert in ihm Integer.MAX_VALUE. Ebenfalls ist auch jeder Knoten welcher von diesem Zyklus erreichbar ist Integer.MAX_VALUE
 	
 Prim Algorithmus
 	
