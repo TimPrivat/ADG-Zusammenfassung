@@ -273,13 +273,37 @@ Dijkstra Algorithmus
 
 	Erstelle eine Tabelle. Diese Tabelle hat 3 Spalten: Knoten, Kosten und Vorgänger. In der Knotenspalte bekommt jeder Knoten eine Zeile. ... IDK guck das video
 
-Bellmann Algorithmus
+
+	Verwendungszweck:	Berechnet den kürzesten Abstand zwischen 2 Knoten in einem gewichteten Graphen
+	
+	Vorgehensweise:
+
+		1. Alle Knotenwerte auf Unendlich setzen
+
+		2. Immer den Knoten auswählen der die geringsten Kosten hat und noch nicht besucht wurde
+
+		3. Von diesem Knoten die Abstände zu den Nachbarn ermitteln und das Minimum als neuen Knotenwert eintragen 
+	
+		4. 2 und 3 wiederholen
+
+
+Bellmann-Ford Algorithmus
 	
 	https://studyflix.de/informatik/bellman-ford-algorithmus-1294
 
 	Startknoten auswählen und setze dessen Distanz auf 0. 
 
-Falls ein Negativer Zyklus existiert ist jeder Wert in ihm Integer.MAX_VALUE. Ebenfalls ist auch jeder Knoten welcher von diesem Zyklus erreichbar ist Integer.MAX_VALUE
+	Falls ein Negativer Zyklus existiert ist jeder Wert in ihm Integer.MAX_VALUE. Ebenfalls ist auch jeder Knoten welcher von diesem Zyklus erreichbar ist Integer.MAX_VALUE
+
+	
+	Verwendungszweck:	Berechnet den kürzesten Abstand zwischen 2 Knoten in einem gewchteten Graphen auch mit negativen Kanten	
+
+	Vorgehensweise:
+
+		Wie Djikstra, es wird nur jeder Knoten geprüft und nicht immer der mit den geringsten Kosten 
+			
+		Abbruch des Algorithmus bei negativem Zyklus 	
+
 	
 Prim Algorithmus
 	
@@ -351,34 +375,6 @@ Boyer Moore PM Algorithmus:
 	51239518320
 	            951
 	Wiederhole.
-
-
-Knuth Morris Pratt Algorithmus:
-
-	Präprozession:
-	Bereite eine Tabelle vor. 
-	j     0 1 2 3 4
-	P[j] a b a b b	
-	F(j) 0 0 1 2 2
-
-	Diese zeigt wo der Präfix (a,b) im rest des Patterns zu finden ist. 
-	
-	Text = 415415412 Pattern = 415412
-
-	415415412 
-	415412
-
-	Tabelle des Patterns 
-	j     0 1 2 3 4 5
-	P[j] 4 1 5 4 1 2	
-	F(j) 0 0 0 1 2 0
-	
-	415415412 
-	415412
-
-	Man vergleicht j = 0 (P[0]) mit i = 0. Falls das matcht dann beide + 1. Bei einem mismatch (i = 5) geht man dahin an den index wo F(J-1) ist. das bedeutet bei uns 
-	j = 2. Man vergleicht also jetzt i = 5 mit j = 2, falls es matcht geht man weiter falls nicht geht man zu F(j-1) = 0. Man geht also zum letzt bekanntem Prefix zurück. 
-
 
 
 Hamming Distanz:
