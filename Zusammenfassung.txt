@@ -1,4 +1,11 @@
-		Sortieralgorithmen:
+Komplexitätshierarchie:
+
+O(0) < O(1) < O(log n) <  O(n) < O(n log n) < O(n^k) < O(k^n) < O(n^n) 
+
+n: Eingabelänge
+k: Konstante
+
+Sortieralgorithmen:
 
 Selectionsort
 
