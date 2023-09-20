@@ -335,7 +335,7 @@ Flussnetzwerk:
 MinCut
 	Mincut: Gerade welche quer durch den fluss geht. Die summierte Kapazität der Kanten ist ihr wert. Mincut ist die gerade mit der Kleinstmöglichen Kombination an Kanten.
 	Der MinCut = der Maxfluss
-	
+	https://www.youtube.com/watch?v=R_OKHC8FRO0&ab_channel=JuddyProductions
 	
 Zu11.3: Keine Ahnung, nichts gefunden aber würde einfach tmpknoten einführen in die jeweils eine Kante ein und aus geht die die Kapazität vom knoten haben... oder Knoten einfach als Kanten behandeln
 
